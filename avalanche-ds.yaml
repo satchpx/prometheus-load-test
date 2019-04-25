@@ -9,7 +9,7 @@ spec:
 ---
 #create deployment avalanche
 apiVersion: apps/v1
-kind: Deployment
+kind: DaemonSet
 metadata:
   name: avalanche
   namespace: avalanche
@@ -19,7 +19,6 @@ spec:
   selector:
     matchLabels:
       name: avalanche
-  replicas: 1 # tells deployment to run 1 pods matching the template
   template:
     metadata:
       labels:
