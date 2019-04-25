@@ -8,3 +8,5 @@ git clone https://github.com/satchpx/prometheus-load-test.git
 cd prometheus-load-test
 kubectl apply -f avalance.yaml
 ```
+
+### Credits: https://github.com/open-fresh/avalanche
