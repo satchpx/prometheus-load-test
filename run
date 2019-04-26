@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -e
 
-while (1); do
+while true; do
     cat /dev/null > /var/log/avalanche.log
     docker run -t --rm --net=host quay.io/freshtracks.io/avalanche --metric-count=500 --label-count=100 --series-count=10 --port=9030 1>>/var/log/avalanche.log 2>&1
 done
