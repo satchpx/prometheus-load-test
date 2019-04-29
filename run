@@ -5,5 +5,7 @@ LOGFILE='/var/log/avalanche.log'
 while true; do
     cat /dev/null > ${LOGFILE}
     CMD='docker run -t --rm --net=host quay.io/freshtracks.io/avalanche --metric-count=500 --label-count=100 --series-count=10 --port=9030'
-    eval ${CMD} 1 >> ${LOGFILE} 2>&1
+    # @TODO: Need to capture logs to ${LOGFILE}
+    #eval ${CMD} 1 >> ${LOGFILE} 2>&1
+    exec ${CMD}
 done
